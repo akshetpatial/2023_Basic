@@ -173,4 +173,153 @@ E:\2023_project>git status
 On branch master
 nothing to commit, working tree clean
 
-E:\2023_project>
+E:\2023_project>git init
+Reinitialized existing Git repository in E:/2023_project/.git/
+
+E:\2023_project>git log
+commit 09c4fce3fcfbb2b766162b6deb87e7c54482c411 (HEAD -> master)
+Author: AKSHET PATIAL <akshet.patial@gmail.com>
+Date:   Sat Feb 18 17:01:19 2023 +0530
+
+    commands added in the commands.txt file
+
+commit 4fef2eea660c38601ece141fdcf2d349a3e07839
+Author: AKSHET PATIAL <akshet.patial@gmail.com>
+Date:   Sat Feb 18 16:48:01 2023 +0530
+
+    Commands.txt file created
+
+E:\2023_project>echo> testfile.txt
+
+E:\2023_project>git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        testfile.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+E:\2023_project>git add .
+
+E:\2023_project>git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   testfile.txt
+
+
+E:\2023_project>git commit -m "added a new file test.txt"
+[master b23f9a8] added a new file test.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 testfile.txt
+
+E:\2023_project>git status
+On branch master
+nothing to commit, working tree clean
+
+E:\2023_project>type testfile.txt
+ECHO is on.
+
+E:\2023_project>notepad testfile.txt
+
+E:\2023_project>git status
+On branch master
+nothing to commit, working tree clean
+
+E:\2023_project>notepad testfile.txt
+
+E:\2023_project>git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   testfile.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+E:\2023_project>git log
+commit b23f9a8486d44a1ae0cead694ca04f2b5d7fdc5d (HEAD -> master)
+Author: AKSHET PATIAL <akshet.patial@gmail.com>
+Date:   Sat Feb 18 17:26:30 2023 +0530
+
+    added a new file test.txt
+
+commit 09c4fce3fcfbb2b766162b6deb87e7c54482c411
+Author: AKSHET PATIAL <akshet.patial@gmail.com>
+Date:   Sat Feb 18 17:01:19 2023 +0530
+
+    commands added in the commands.txt file
+
+commit 4fef2eea660c38601ece141fdcf2d349a3e07839
+Author: AKSHET PATIAL <akshet.patial@gmail.com>
+Date:   Sat Feb 18 16:48:01 2023 +0530
+
+    Commands.txt file created
+
+E:\2023_project>del testfile.txt
+
+E:\2023_project>git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    testfile.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+E:\2023_project>git add .
+
+E:\2023_project>git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    testfile.txt
+
+
+E:\2023_project>git commit -m "deleted the file testfile.txt"
+[master 6a1be12] deleted the file testfile.txt
+ 1 file changed, 1 deletion(-)
+ delete mode 100644 testfile.txt
+
+E:\2023_project>git status
+On branch master
+nothing to commit, working tree clean
+
+E:\2023_project>git log
+commit 6a1be12e529ccda7ab8bdd0b5a23768370233ff0 (HEAD -> master)
+Author: AKSHET PATIAL <akshet.patial@gmail.com>
+Date:   Sat Feb 18 17:28:48 2023 +0530
+
+    deleted the file testfile.txt
+
+commit b23f9a8486d44a1ae0cead694ca04f2b5d7fdc5d
+Author: AKSHET PATIAL <akshet.patial@gmail.com>
+Date:   Sat Feb 18 17:26:30 2023 +0530
+
+    added a new file test.txt
+
+commit 09c4fce3fcfbb2b766162b6deb87e7c54482c411
+Author: AKSHET PATIAL <akshet.patial@gmail.com>
+Date:   Sat Feb 18 17:01:19 2023 +0530
+
+    commands added in the commands.txt file
+
+commit 4fef2eea660c38601ece141fdcf2d349a3e07839
+Author: AKSHET PATIAL <akshet.patial@gmail.com>
+Date:   Sat Feb 18 16:48:01 2023 +0530
+
+    Commands.txt file created
+
+E:\2023_project>git reset b23f9a8486d44a1ae0cead694ca04f2b5d7fdc5d
+Unstaged changes after reset:
+D       testfile.txt
+
+E:\2023_project>git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    testfile.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
