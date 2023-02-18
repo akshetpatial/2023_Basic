@@ -1,1 +1,176 @@
-ECHO is on.
+E:\>dir
+ Volume in drive E is Local disk
+ Volume Serial Number is 0631-9922
+ Directory of E:\
+10-12-2022  01:47 PM       352,051,200 Amazon+WorkSpaces.msi
+12-05-2021  08:05 PM    <DIR>          Android_Studio
+05-06-2021  01:25 AM    <DIR>          Ansys_HFSS_17
+31-10-2021  04:41 PM    <DIR>          Apache POI
+09-11-2021  11:37 AM    <DIR>          ApacheTomcat
+26-07-2021  06:09 PM    <DIR>          Bluestck
+11-12-2022  11:54 AM           383,697 ConfirmationPage-22500193209.pdf
+10-01-2021  09:54 PM    <DIR>          Dev-Cpp                                     18-11-2021  01:02 PM    <DIR>          Eclipse
+28-08-2021  01:14 PM       116,146,208 eclipse-inst-jre-win64.exe
+08-01-2021  11:04 AM    <DIR>          ES lab
+07-09-2022  06:14 PM    <DIR>          FrontEnd-AngularJS
+12-05-2021  04:59 PM    <DIR>          Git
+29-05-2019  09:37 PM    <DIR>          GNUSim8085
+26-07-2021  12:56 PM    <DIR>          inkscape
+29-07-2022  08:11 PM    <DIR>          Java_SpringBoot_Angular
+04-09-2018  12:42 AM    <DIR>          Lite Small
+04-01-2020  03:38 PM    <DIR>          LL
+28-08-2018  09:22 PM    <DIR>          matlab64
+04-01-2020  11:19 PM    <DIR>          Modeltech_pe_edu_10.4a
+08-02-2021  04:16 PM    <DIR>          mongo DB
+29-08-2021  07:31 PM         2,462,364 mysql-connector-java-8.0.26.jar
+28-07-2022  08:29 PM        28,577,792 node-v16.16.0-x64.msi
+10-01-2021  09:55 PM    <DIR>          Others
+12-05-2021  04:58 PM    <DIR>          PSpice
+03-07-2019  02:33 PM    <DIR>          python
+21-05-2022  12:02 AM    <DIR>          RRR
+05-05-2022  11:05 AM       100,006,536 SamsungDeXSetupWin (1).exe
+05-05-2022  10:58 AM       100,006,536 SamsungDeXSetupWin.exe
+17-03-2019  07:52 PM    <DIR>          scmitt trigger-PSpiceFiles
+12-05-2021  04:59 PM    <DIR>          SQL
+13-11-2021  11:21 PM    <DIR>          torrent
+06-09-2020  08:03 AM    <DIR>          ubuntu
+15-05-2021  11:43 AM    <DIR>          Virtual Box
+30-05-2021  12:23 AM    <DIR>          WAndroid
+29-07-2021  11:19 PM    <DIR>          WAndroid_Development
+03-02-2022  01:42 AM    <DIR>          WEB development                             30-12-2022  06:28 PM        67,719,819 Win64OpenSSL-1_1_1s.exe
+08-02-2021  04:28 PM    <DIR>          Xilinx
+08-02-2021  04:44 PM    <DIR>          Xilinx_ISE_S6_Win10_14.7_ISE_VMs_0206_1
+14-12-2021  10:28 PM    <DIR>          [ CourseHulu.com ] Udemy - Keycloak - Single Sign On with Spring Boot & Spring Security
+               8 File(s)    767,354,152 bytes
+              33 Dir(s)  291,124,752,384 bytes free
+
+E:\>mkdir 2023_project
+
+E:\>cd 2023_project
+
+E:\2023_project>dir
+ Volume in drive E is Local disk
+ Volume Serial Number is 0631-9922
+
+ Directory of E:\2023_project
+
+13-02-2023  12:44 PM    <DIR>          .
+13-02-2023  12:44 PM    <DIR>          ..
+               0 File(s)              0 bytes
+               2 Dir(s)  291,124,752,384 bytes free
+
+E:\2023_project>git init
+Initialized empty Git repository in E:/2023_project/.git/
+
+E:\2023_project>dir
+ Volume in drive E is Local disk
+ Volume Serial Number is 0631-9922
+
+ Directory of E:\2023_project
+
+18-02-2023  04:29 PM    <DIR>          .
+18-02-2023  04:29 PM    <DIR>          ..
+               0 File(s)              0 bytes
+               2 Dir(s)  291,124,703,232 bytes free
+
+E:\2023_project>dir -a
+ Volume in drive E is Local disk
+ Volume Serial Number is 0631-9922
+
+ Directory of E:\2023_project
+
+File Not Found
+
+E:\2023_project>dir /a
+ Volume in drive E is Local disk
+ Volume Serial Number is 0631-9922
+
+ Directory of E:\2023_project
+
+18-02-2023  04:29 PM    <DIR>          .
+18-02-2023  04:29 PM    <DIR>          ..
+18-02-2023  04:29 PM    <DIR>          .git
+               0 File(s)              0 bytes
+               3 Dir(s)  291,124,703,232 bytes free
+
+E:\2023_project>dir .git
+ Volume in drive E is Local disk
+ Volume Serial Number is 0631-9922
+
+ Directory of E:\2023_project\.git
+
+18-02-2023  04:29 PM               130 config
+18-02-2023  04:29 PM                73 description
+18-02-2023  04:29 PM                23 HEAD
+18-02-2023  04:29 PM    <DIR>          hooks
+18-02-2023  04:29 PM    <DIR>          info
+18-02-2023  04:29 PM    <DIR>          objects
+18-02-2023  04:29 PM    <DIR>          refs
+               3 File(s)            226 bytes
+               4 Dir(s)  291,124,703,232 bytes free
+
+E:\2023_project>echo commands.txt
+commands.txt
+
+E:\2023_project>echo >commands.txt
+
+E:\2023_project>echo>commands.txt
+
+E:\2023_project>dir
+ Volume in drive E is Local disk
+ Volume Serial Number is 0631-9922
+
+ Directory of E:\2023_project
+
+18-02-2023  04:40 PM    <DIR>          .
+18-02-2023  04:40 PM    <DIR>          ..
+18-02-2023  04:41 PM                13 commands.txt
+               1 File(s)             13 bytes
+               2 Dir(s)  291,124,703,232 bytes free
+
+E:\2023_project>dir /a
+ Volume in drive E is Local disk
+ Volume Serial Number is 0631-9922
+
+ Directory of E:\2023_project
+
+18-02-2023  04:40 PM    <DIR>          .
+18-02-2023  04:40 PM    <DIR>          ..
+18-02-2023  04:29 PM    <DIR>          .git
+18-02-2023  04:41 PM                13 commands.txt
+               1 File(s)             13 bytes
+               3 Dir(s)  291,124,703,232 bytes free
+
+E:\2023_project>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        commands.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+E:\2023_project>git add commands.txt
+
+E:\2023_project>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   commands.txt
+
+
+E:\2023_project>git commit -m "Commands.txt file created"
+[master (root-commit) 4fef2ee] Commands.txt file created
+ 1 file changed, 1 insertion(+)
+ create mode 100644 commands.txt
+
+E:\2023_project>git status
+On branch master
+nothing to commit, working tree clean
+
+E:\2023_project>
