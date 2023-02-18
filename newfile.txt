@@ -1,2 +1,6 @@
 ECHO is on.
+<<<<<<< Updated upstream
 Making the chanegs third time afte using stash twice.
+=======
+Adding some more chaneges in the newfile after using the stash.
+>>>>>>> Stashed changes

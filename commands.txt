@@ -396,5 +396,42 @@ E:\2023_project>git log --graph --all
 
       Commands.txt file created
 
+###########  End of the cmd  ############
 
+
+###########  Start of the Git Bash CLI TOOL  ############
+
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e
+$ cd /c/
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /c
+$ ls
+'$AV_ASW'/         'Documents and Settings'@  'Program Files (x86)'/         bootmgr
+'$Recycle.Bin'/     Keil_v5/                   ProgramData/                  data/
+'$SysReset'/        MSOCache/                  Python310/                    found.000/
+'$WINDOWS.~BT'/     Modeltech_pe_edu_10.4a/    Python39/                     hiberfil.sys
+'$WinREAgent'/     'New folder'/               Recovery/                     keytabs/
+ AMD/               OneDriveTemp/             'System Volume Information'/   pagefile.sys
+'Android Studio'/   OrCAD/                     Users/                        rei/
+ BOOTNXT            PerfLogs/                  Windows/                      swapfile.sys
+ Config.Msi/       'Program Files'/            YOGISOFT/
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /c
+$ cd /e/
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e
+$ cd 2023_project/
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ ls
+commands.txt  newfile.txt
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ ls -a
+./  ../  .git/  commands.txt  newfile.txt
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ cat newfile.txt
+ECHO is on.
 
