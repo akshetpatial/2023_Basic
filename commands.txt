@@ -323,3 +323,78 @@ Changes not staged for commit:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 
+E:\2023_project>git log --graph --oneline --decorate --all
+* a4a525e (HEAD -> master) a new file is added by the name newfile.txt
+| * 2492564 (refs/stash) WIP on master: b23f9a8 added a new file test.txt
+|/|
+| * a8755fc index on master: b23f9a8 added a new file test.txt
+|/
+* b23f9a8 added a new file test.txt
+* 09c4fce commands added in the commands.txt file
+* 4fef2ee Commands.txt file created
+
+E:\2023_project>git log --graph
+* commit a4a525ed0eed54fff36341e02b9a521b1897b973 (HEAD -> master)
+| Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| Date:   Sat Feb 18 17:33:29 2023 +0530
+|
+|     a new file is added by the name newfile.txt
+|
+* commit b23f9a8486d44a1ae0cead694ca04f2b5d7fdc5d
+| Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| Date:   Sat Feb 18 17:26:30 2023 +0530
+|
+|     added a new file test.txt
+|
+* commit 09c4fce3fcfbb2b766162b6deb87e7c54482c411
+| Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| Date:   Sat Feb 18 17:01:19 2023 +0530
+|
+|     commands added in the commands.txt file
+|
+* commit 4fef2eea660c38601ece141fdcf2d349a3e07839
+  Author: AKSHET PATIAL <akshet.patial@gmail.com>
+  Date:   Sat Feb 18 16:48:01 2023 +0530
+
+      Commands.txt file created
+
+E:\2023_project>git log --graph --all
+* commit a4a525ed0eed54fff36341e02b9a521b1897b973 (HEAD -> master)
+| Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| Date:   Sat Feb 18 17:33:29 2023 +0530
+|
+|     a new file is added by the name newfile.txt
+|
+| * commit 2492564bc1a56553dfa3dc93c9153a42a9ae0d46 (refs/stash)
+|/| Merge: b23f9a8 a8755fc
+| | Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| | Date:   Sat Feb 18 17:32:07 2023 +0530
+| |
+| |     WIP on master: b23f9a8 added a new file test.txt
+| |
+| * commit a8755fcf960fc988418c13f5bedc20e856652e3d
+|/  Author: AKSHET PATIAL <akshet.patial@gmail.com>
+|   Date:   Sat Feb 18 17:32:07 2023 +0530
+|
+|       index on master: b23f9a8 added a new file test.txt
+|
+* commit b23f9a8486d44a1ae0cead694ca04f2b5d7fdc5d
+| Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| Date:   Sat Feb 18 17:26:30 2023 +0530
+|
+|     added a new file test.txt
+|
+* commit 09c4fce3fcfbb2b766162b6deb87e7c54482c411
+| Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| Date:   Sat Feb 18 17:01:19 2023 +0530
+|
+|     commands added in the commands.txt file
+|
+* commit 4fef2eea660c38601ece141fdcf2d349a3e07839
+  Author: AKSHET PATIAL <akshet.patial@gmail.com>
+  Date:   Sat Feb 18 16:48:01 2023 +0530
+
+      Commands.txt file created
+
+
+
