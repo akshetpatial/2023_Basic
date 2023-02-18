@@ -435,3 +435,140 @@ Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
 $ cat newfile.txt
 ECHO is on.
 
+******************* Start of the Remote Repository commands ***********************
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git remote -v
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git remote add origin https://github.com/akshetpatial/2023_Basic.git
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git remote -v
+origin  https://github.com/akshetpatial/2023_Basic.git (fetch)
+origin  https://github.com/akshetpatial/2023_Basic.git (push)
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git remote remove origin
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git remote -v
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git remote add origin https://github.com/akshetpatial/2023_Basic.git
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git push origin master
+To https://github.com/akshetpatial/2023_Basic.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/akshetpatial/2023_Basic.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git branch -a
+* master
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git branch -ar
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git branch -r
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git fetch master
+fatal: 'master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git fetch origin
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 726 bytes | 6.00 KiB/s, done.
+From https://github.com/akshetpatial/2023_Basic
+ * [new branch]      master     -> origin/master
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git branch -a
+* master
+  remotes/origin/master
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git log --all --graph -4
+* commit 2a03be7258160f69a01b15ebfe5ac3c1ebd7d703 (HEAD -> master)
+| Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| Date:   Sun Feb 19 00:10:16 2023 +0530
+|
+|     no change
+|
+| * commit 346e9ce756240a67bf7c2e9785004f40489334c5 (origin/master)
+|/  Author: AKSHET PATIAL <44276149+akshetpatial@users.noreply.github.com>
+|   Date:   Sun Feb 19 00:07:39 2023 +0530
+|
+|       created a readme file
+|
+* commit f8c40faf495a72a0ab4a143513b8ca7db3735010
+| Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| Date:   Sat Feb 18 22:42:14 2023 +0530
+|
+|     stash works
+|
+* commit bc4eea5c66a082e8d73f7ee1442b3421907c27fe
+| Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| Date:   Sat Feb 18 22:38:14 2023 +0530
+|
+|     saving changes before poping out the stash
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git merge origin
+merge: origin - not something we can merge
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git merge origin/master
+Merge made by the 'recursive' strategy.
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 README.md
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git log --all --graph -4
+*   commit 3e231e5535dd47bc84180f5036ded70c7c5c685c (HEAD -> master)
+|\  Merge: 2a03be7 346e9ce
+| | Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| | Date:   Sun Feb 19 00:39:02 2023 +0530
+| |
+| |     Merge remote-tracking branch 'origin/master'
+| |     Merging the content from remote repository to local repository
+| |
+| * commit 346e9ce756240a67bf7c2e9785004f40489334c5 (origin/master)
+| | Author: AKSHET PATIAL <44276149+akshetpatial@users.noreply.github.com>
+| | Date:   Sun Feb 19 00:07:39 2023 +0530
+| |
+| |     created a readme file
+| |
+* | commit 2a03be7258160f69a01b15ebfe5ac3c1ebd7d703
+|/  Author: AKSHET PATIAL <akshet.patial@gmail.com>
+|   Date:   Sun Feb 19 00:10:16 2023 +0530
+|
+|       no change
+|
+* commit f8c40faf495a72a0ab4a143513b8ca7db3735010
+| Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| Date:   Sat Feb 18 22:42:14 2023 +0530
+|
+|     stash works
+
+
+
