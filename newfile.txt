@@ -1,1 +1,2 @@
 ECHO is on.
+Making the chanegs third time afte using stash twice.
