@@ -1249,4 +1249,628 @@ $ git push origin master
 Everything up-to-date
 
 
+***************************** added the last few commands related to Push,fetch,Pull  ****************************
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project ((e0f5303...))
+$ git checkout master
+Warning: you are leaving 1 commit behind, not connected to
+any of your branches:
+
+  e0f5303 file_1.txt, file_2.txt, file_3.txt deleted
+
+If you want to keep it by creating a new branch, this may be a good time
+to do so with:
+
+ git branch <new-branch-name> e0f5303
+
+Switched to branch 'master'
+M       commands.txt
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git log -4 --all --graph
+*   commit 7f284f7d7f272d1c546babe6dc18553e9be20d85 (origin/temp, temp)
+|\  Merge: 7d74bcf 9dbf099
+| | Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| | Date:   Mon Feb 20 01:36:44 2023 +0530
+| |
+| |     Merge branch 'temp' of https://github.com/akshetpatial/2023_Basic into temp
+| |     Pulling the changes from remote to local inorder to push the rebase
+| |     changes.
+| |
+| * commit 9dbf0992b500321572d7d8fe8c44f362cbe02d5d (HEAD -> master, origin/master)
+| | Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| | Date:   Mon Feb 20 00:44:40 2023 +0530
+| |
+| |     a new file file_3.txt is created
+| |
+| * commit 88a41c2e7dd695dce97f0ec389440ff09c25bbc8
+| | Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| | Date:   Mon Feb 20 00:44:27 2023 +0530
+| |
+| |     a new file file_2.txt is created
+| |
+* | commit 7d74bcfa501a07de5e3e4fd4a7cc83d1ba5df65c
+|/  Author: AKSHET PATIAL <akshet.patial@gmail.com>
+|   Date:   Mon Feb 20 00:44:27 2023 +0530
+|
+|       a new file file_2.txt is created
+|
+|       a new file file_3.txt is created
+|
+|       Commits are merged using git rebase
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   commands.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git add .
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   commands.txt
+
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git commit -m "Added the Rebase commands"
+[master 74383e1] Added the Rebase commands
+ 1 file changed, 678 insertions(+)
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git log -4 --all --graph
+* commit 74383e1f7a41f3d7c5af45a7447b2d8ca280c1dc (HEAD -> master)
+| Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| Date:   Mon Feb 20 23:59:30 2023 +0530
+|
+|     Added the Rebase commands
+|
+| *   commit 7f284f7d7f272d1c546babe6dc18553e9be20d85 (origin/temp, temp)
+| |\  Merge: 7d74bcf 9dbf099
+| |/  Author: AKSHET PATIAL <akshet.patial@gmail.com>
+|/|   Date:   Mon Feb 20 01:36:44 2023 +0530
+| |
+| |       Merge branch 'temp' of https://github.com/akshetpatial/2023_Basic into temp
+| |       Pulling the changes from remote to local inorder to push the rebase
+| |       changes.
+| |
+* | commit 9dbf0992b500321572d7d8fe8c44f362cbe02d5d (origin/master)
+| | Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| | Date:   Mon Feb 20 00:44:40 2023 +0530
+| |
+| |     a new file file_3.txt is created
+| |
+* | commit 88a41c2e7dd695dce97f0ec389440ff09c25bbc8
+| | Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| | Date:   Mon Feb 20 00:44:27 2023 +0530
+| |
+| |     a new file file_2.txt is created
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 6.33 KiB | 1.58 MiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/akshetpatial/2023_Basic.git
+   9dbf099..74383e1  master -> master
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git log -4 --all --graph
+* commit 74383e1f7a41f3d7c5af45a7447b2d8ca280c1dc (HEAD -> master, origin/master)
+| Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| Date:   Mon Feb 20 23:59:30 2023 +0530
+|
+|     Added the Rebase commands
+|
+| *   commit 7f284f7d7f272d1c546babe6dc18553e9be20d85 (origin/temp, temp)
+| |\  Merge: 7d74bcf 9dbf099
+| |/  Author: AKSHET PATIAL <akshet.patial@gmail.com>
+|/|   Date:   Mon Feb 20 01:36:44 2023 +0530
+| |
+| |       Merge branch 'temp' of https://github.com/akshetpatial/2023_Basic into temp
+| |       Pulling the changes from remote to local inorder to push the rebase
+| |       changes.
+| |
+* | commit 9dbf0992b500321572d7d8fe8c44f362cbe02d5d
+| | Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| | Date:   Mon Feb 20 00:44:40 2023 +0530
+| |
+| |     a new file file_3.txt is created
+| |
+* | commit 88a41c2e7dd695dce97f0ec389440ff09c25bbc8
+| | Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| | Date:   Mon Feb 20 00:44:27 2023 +0530
+| |
+| |     a new file file_2.txt is created
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git push origin temp
+Everything up-to-date
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git pull origin
+You asked to pull from the remote 'origin', but did not specify
+a branch. Because this is not the default configured remote
+for your current branch, you must specify a branch on the command line.
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git pull origin master
+From https://github.com/akshetpatial/2023_Basic
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git checkout temp
+Switched to branch 'temp'
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (temp)
+$ git pull origin master
+From https://github.com/akshetpatial/2023_Basic
+ * branch            master     -> FETCH_HEAD
+Merge made by the 'recursive' strategy.
+ commands.txt | 678 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 678 insertions(+)
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (temp)
+$ git status
+On branch temp
+nothing to commit, working tree clean
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (temp)
+$ git log -4 --all --graph
+*   commit c7f1c1dfe0a3fc9da62f32a84d04ebf769cb9c21 (HEAD -> temp)
+|\  Merge: 7f284f7 74383e1
+| | Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| | Date:   Tue Feb 21 00:07:55 2023 +0530
+| |
+| |     Merge branch 'master' of https://github.com/akshetpatial/2023_Basic into temp
+| |     Master was one comit ahead of the Temp
+| |
+| * commit 74383e1f7a41f3d7c5af45a7447b2d8ca280c1dc (origin/master, master)
+| | Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| | Date:   Mon Feb 20 23:59:30 2023 +0530
+| |
+| |     Added the Rebase commands
+| |
+* | commit 7f284f7d7f272d1c546babe6dc18553e9be20d85 (origin/temp)
+|\| Merge: 7d74bcf 9dbf099
+| | Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| | Date:   Mon Feb 20 01:36:44 2023 +0530
+| |
+| |     Merge branch 'temp' of https://github.com/akshetpatial/2023_Basic into temp
+| |     Pulling the changes from remote to local inorder to push the rebase
+| |     changes.
+| |
+| * commit 9dbf0992b500321572d7d8fe8c44f362cbe02d5d
+| | Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| | Date:   Mon Feb 20 00:44:40 2023 +0530
+| |
+| |     a new file file_3.txt is created
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (temp)
+$ git pull origin temp
+From https://github.com/akshetpatial/2023_Basic
+ * branch            temp       -> FETCH_HEAD
+Already up to date.
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (temp)
+$ git push origin temp
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 294 bytes | 98.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/akshetpatial/2023_Basic.git
+   7f284f7..c7f1c1d  temp -> temp
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (temp)
+$ git log -4 --all --graph
+*   commit c7f1c1dfe0a3fc9da62f32a84d04ebf769cb9c21 (HEAD -> temp, origin/temp)
+|\  Merge: 7f284f7 74383e1
+| | Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| | Date:   Tue Feb 21 00:07:55 2023 +0530
+| |
+| |     Merge branch 'master' of https://github.com/akshetpatial/2023_Basic into temp
+| |     Master was one comit ahead of the Temp
+| |
+| * commit 74383e1f7a41f3d7c5af45a7447b2d8ca280c1dc (origin/master, master)
+| | Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| | Date:   Mon Feb 20 23:59:30 2023 +0530
+| |
+| |     Added the Rebase commands
+| |
+* | commit 7f284f7d7f272d1c546babe6dc18553e9be20d85
+|\| Merge: 7d74bcf 9dbf099
+| | Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| | Date:   Mon Feb 20 01:36:44 2023 +0530
+| |
+| |     Merge branch 'temp' of https://github.com/akshetpatial/2023_Basic into temp
+| |     Pulling the changes from remote to local inorder to push the rebase
+| |     changes.
+| |
+| * commit 9dbf0992b500321572d7d8fe8c44f362cbe02d5d
+| | Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| | Date:   Mon Feb 20 00:44:40 2023 +0530
+| |
+| |     a new file file_3.txt is created
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (temp)
+$ git checkout master
+Switched to branch 'master'
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git log -4 --all --graph
+*   commit c7f1c1dfe0a3fc9da62f32a84d04ebf769cb9c21 (origin/temp, temp)
+|\  Merge: 7f284f7 74383e1
+| | Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| | Date:   Tue Feb 21 00:07:55 2023 +0530
+| |
+| |     Merge branch 'master' of https://github.com/akshetpatial/2023_Basic into temp
+| |     Master was one comit ahead of the Temp
+| |
+| * commit 74383e1f7a41f3d7c5af45a7447b2d8ca280c1dc (HEAD -> master, origin/master)
+| | Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| | Date:   Mon Feb 20 23:59:30 2023 +0530
+| |
+| |     Added the Rebase commands
+| |
+* | commit 7f284f7d7f272d1c546babe6dc18553e9be20d85
+|\| Merge: 7d74bcf 9dbf099
+| | Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| | Date:   Mon Feb 20 01:36:44 2023 +0530
+| |
+| |     Merge branch 'temp' of https://github.com/akshetpatial/2023_Basic into temp
+| |     Pulling the changes from remote to local inorder to push the rebase
+| |     changes.
+| |
+| * commit 9dbf0992b500321572d7d8fe8c44f362cbe02d5d
+| | Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| | Date:   Mon Feb 20 00:44:40 2023 +0530
+| |
+| |     a new file file_3.txt is created
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ del file_1.txt
+bash: del: command not found
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ rm file_1.txt
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ rm file_2.txt
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ rm file_3.txt
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    file_1.txt
+        deleted:    file_2.txt
+        deleted:    file_3.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git add .
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    file_1.txt
+        deleted:    file_2.txt
+        deleted:    file_3.txt
+
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git commit -m "Deleted the temperory files file_1.txt, file_2.txt, file_3.txt"
+[master 9abba4f] Deleted the temperory files file_1.txt, file_2.txt, file_3.txt
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 file_1.txt
+ delete mode 100644 file_2.txt
+ delete mode 100644 file_3.txt
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git log -4 --all --graph
+* commit 9abba4f423de3e9f541dbf780fcbc25b691414e2 (HEAD -> master)
+| Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| Date:   Tue Feb 21 00:18:40 2023 +0530
+|
+|     Deleted the temperory files file_1.txt, file_2.txt, file_3.txt
+|
+| *   commit c7f1c1dfe0a3fc9da62f32a84d04ebf769cb9c21 (origin/temp, temp)
+| |\  Merge: 7f284f7 74383e1
+| |/  Author: AKSHET PATIAL <akshet.patial@gmail.com>
+|/|   Date:   Tue Feb 21 00:07:55 2023 +0530
+| |
+| |       Merge branch 'master' of https://github.com/akshetpatial/2023_Basic into temp
+| |       Master was one comit ahead of the Temp
+| |
+* | commit 74383e1f7a41f3d7c5af45a7447b2d8ca280c1dc (origin/master)
+| | Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| | Date:   Mon Feb 20 23:59:30 2023 +0530
+| |
+| |     Added the Rebase commands
+| |
+| *   commit 7f284f7d7f272d1c546babe6dc18553e9be20d85
+| |\  Merge: 7d74bcf 9dbf099
+| |/  Author: AKSHET PATIAL <akshet.patial@gmail.com>
+|/|   Date:   Mon Feb 20 01:36:44 2023 +0530
+| |
+| |       Merge branch 'temp' of https://github.com/akshetpatial/2023_Basic into temp
+| |       Pulling the changes from remote to local inorder to push the rebase
+| |       changes.
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git push origin master
+To https://github.com/akshetpatial/2023_Basic.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/akshetpatial/2023_Basic.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git fetch origin master
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), 627 bytes | 12.00 KiB/s, done.
+From https://github.com/akshetpatial/2023_Basic
+ * branch            master     -> FETCH_HEAD
+   74383e1..30da3ae  master     -> origin/master
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git push origin master
+To https://github.com/akshetpatial/2023_Basic.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/akshetpatial/2023_Basic.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git fetch origin master
+From https://github.com/akshetpatial/2023_Basic
+ * branch            master     -> FETCH_HEAD
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git pull origin master
+From https://github.com/akshetpatial/2023_Basic
+ * branch            master     -> FETCH_HEAD
+Already up to date!
+Merge made by the 'recursive' strategy.
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git push origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 564 bytes | 141.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/akshetpatial/2023_Basic.git
+   30da3ae..27d06e5  master -> master
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git status
+On branch master
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git log -4 --all --graph
+*   commit 27d06e542cbcdc3d3d2446efb2b4551e47d71345 (HEAD -> master, origin/master)
+|\  Merge: 9abba4f 30da3ae
+| | Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| | Date:   Tue Feb 21 00:23:12 2023 +0530
+| |
+| |     Merge branch 'master' of https://github.com/akshetpatial/2023_Basic
+| |     Pulling From Remote Repository inorder to push as the origin Master
+| |     (Remote) was behind the Head.
+| |
+| *   commit 30da3aedcb0be8ae05222cc1f4f20975b1f4318a
+| |\  Merge: 74383e1 c7f1c1d
+| | | Author: AKSHET PATIAL <44276149+akshetpatial@users.noreply.github.com>
+| | | Date:   Tue Feb 21 00:14:03 2023 +0530
+| | |
+| | |     Merge pull request #2 from akshetpatial/temp
+| | |
+| | |     Temp
+| | |
+| | *   commit c7f1c1dfe0a3fc9da62f32a84d04ebf769cb9c21 (origin/temp, temp)
+| | |\  Merge: 7f284f7 74383e1
+| | |/  Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| |/|   Date:   Tue Feb 21 00:07:55 2023 +0530
+| | |
+| | |       Merge branch 'master' of https://github.com/akshetpatial/2023_Basic into temp
+| | |       Master was one comit ahead of the Temp
+| | |
+| | *   commit 7f284f7d7f272d1c546babe6dc18553e9be20d85
+| | |\  Merge: 7d74bcf 9dbf099
+| | | | Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| | | | Date:   Mon Feb 20 01:36:44 2023 +0530
+| | | |
+| | | |     Merge branch 'temp' of https://github.com/akshetpatial/2023_Basic into temp
+| | | |     Pulling the changes from remote to local inorder to push the rebase
+| | | |     changes.
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project (master)
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project
+$ pwd
+/e/2023_project
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project
+$ ls -a
+./  ../  Git_Basics/
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project
+$ cd Git_Basics
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/Git_Basics (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Git_Cheat_Sheet/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/Git_Basics (master)
+$ git add .
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/Git_Basics (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Git_Cheat_Sheet/Git GitHub Notes.pdf.pdf
+        new file:   Git_Cheat_Sheet/Git__GitHub_102_modified.pdf
+        new file:   Git_Cheat_Sheet/git-cheat-sheet-education.pdf
+
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/Git_Basics (master)
+$ git commit -m "3 Cheat Sheet Files (pdfs) are added"
+[master 2f5cfc2] 3 Cheat Sheet Files (pdfs) are added
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Git_Cheat_Sheet/Git GitHub Notes.pdf.pdf
+ create mode 100644 Git_Cheat_Sheet/Git__GitHub_102_modified.pdf
+ create mode 100644 Git_Cheat_Sheet/git-cheat-sheet-education.pdf
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/Git_Basics (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/Git_Basics (master)
+$ git log -4 --all --graph
+* commit 2f5cfc2264d1432f3313f8cf1e40211ebe086407 (HEAD -> master)
+| Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| Date:   Tue Feb 21 01:09:55 2023 +0530
+|
+|     3 Cheat Sheet Files (pdfs) are added
+|
+*   commit 27d06e542cbcdc3d3d2446efb2b4551e47d71345 (origin/master)
+|\  Merge: 9abba4f 30da3ae
+| | Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| | Date:   Tue Feb 21 00:23:12 2023 +0530
+| |
+| |     Merge branch 'master' of https://github.com/akshetpatial/2023_Basic
+| |     Pulling From Remote Repository inorder to push as the origin Master
+| |     (Remote) was behind the Head.
+| |
+| *   commit 30da3aedcb0be8ae05222cc1f4f20975b1f4318a
+| |\  Merge: 74383e1 c7f1c1d
+| | | Author: AKSHET PATIAL <44276149+akshetpatial@users.noreply.github.com>
+| | | Date:   Tue Feb 21 00:14:03 2023 +0530
+| | |
+| | |     Merge pull request #2 from akshetpatial/temp
+| | |
+| | |     Temp
+| | |
+| | *   commit c7f1c1dfe0a3fc9da62f32a84d04ebf769cb9c21 (origin/temp, temp)
+| | |\  Merge: 7f284f7 74383e1
+| | |/  Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| |/|   Date:   Tue Feb 21 00:07:55 2023 +0530
+| | |
+| | |       Merge branch 'master' of https://github.com/akshetpatial/2023_Basic into temp
+| | |       Master was one comit ahead of the Temp
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/Git_Basics (master)
+$ git push origin master
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 704.53 KiB | 12.15 MiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/akshetpatial/2023_Basic.git
+   27d06e5..2f5cfc2  master -> master
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/Git_Basics (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/Git_Basics (master)
+$ git log -4 --all --graph
+* commit 2f5cfc2264d1432f3313f8cf1e40211ebe086407 (HEAD -> master, origin/master)
+| Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| Date:   Tue Feb 21 01:09:55 2023 +0530
+|
+|     3 Cheat Sheet Files (pdfs) are added
+|
+*   commit 27d06e542cbcdc3d3d2446efb2b4551e47d71345
+|\  Merge: 9abba4f 30da3ae
+| | Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| | Date:   Tue Feb 21 00:23:12 2023 +0530
+| |
+| |     Merge branch 'master' of https://github.com/akshetpatial/2023_Basic
+| |     Pulling From Remote Repository inorder to push as the origin Master
+| |     (Remote) was behind the Head.
+| |
+| *   commit 30da3aedcb0be8ae05222cc1f4f20975b1f4318a
+| |\  Merge: 74383e1 c7f1c1d
+| | | Author: AKSHET PATIAL <44276149+akshetpatial@users.noreply.github.com>
+| | | Date:   Tue Feb 21 00:14:03 2023 +0530
+| | |
+| | |     Merge pull request #2 from akshetpatial/temp
+| | |
+| | |     Temp
+| | |
+| | *   commit c7f1c1dfe0a3fc9da62f32a84d04ebf769cb9c21 (origin/temp, temp)
+| | |\  Merge: 7f284f7 74383e1
+| | |/  Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| |/|   Date:   Tue Feb 21 00:07:55 2023 +0530
+| | |
+| | |       Merge branch 'master' of https://github.com/akshetpatial/2023_Basic into temp
+| | |       Master was one comit ahead of the Temp
+
+
+
 
